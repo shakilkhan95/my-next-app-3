@@ -13,6 +13,9 @@ const Navbar = () => {
         <li>
           <Link href="/user/profile">Profile</Link>
         </li>
+        <li>
+            <Link href="/blog">Blog</Link>
+        </li>
       </>
     ;
 

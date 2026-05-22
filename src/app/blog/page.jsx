@@ -61,7 +61,7 @@ const BlogPage = () => {
             <h2 className="card-title">{blog.title}</h2>
             <p>{blog.content}</p>
             <div className="card-actions justify-start">
-              <Link href={`/blog/${blog.id}`} className="btn btn-primary">Details</Link>
+              <Link href={`/blog/${blog.id}`} className="btn btn-primary">See Details</Link>
             </div>
           </div>
         </div>

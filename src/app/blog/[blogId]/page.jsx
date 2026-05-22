@@ -50,36 +50,23 @@ const blogs = [
   },
 ];
 
-const BlogDetailsPage = async ({ params }) => {
-  const { blogId } = await params;
-  const blog = blogs.find((blog) => blog.id === parseInt(blogId));
+const BlogDetailsPage = async ({params}) => {
+  const {blogId} = await params;
+  const blog = blogs.find(blog => blog.id === parseInt(blogId));
   return (
     <div>
-      {blog ? (
-        <div className="card card-border bg-base-100 w-96">
-          <div className="card-body">
-            <h2 className="card-title">
-              {blog.id}. {blog.title}
-            </h2>
-            <p>{blog.content}</p>
-            <h2 className="card-title">{blog.author}</h2>
-            <div className="card-actions justify-start">
-              <Link href="/blog" className="btn btn-primary">
-                Go Back
-              </Link>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div>
-          <h1>Blog Details Not Found.</h1>
-          <div>
+      <h1 className="text-3xl font-bold text-center">Blogs Details will show here</h1>
+      <div className="card card-border bg-base-100 shadow-md w-96 mx-auto">
+        <div className="card-body">
+          <h2 className="card-title">{blog.title}</h2>
+          <p>{blog.content}</p>
+          <div className="card-actions justify-start">
             <Link href="/blog" className="btn btn-primary">
               Go Back
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

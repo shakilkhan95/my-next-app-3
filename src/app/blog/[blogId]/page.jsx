@@ -50,13 +50,13 @@ const blogs = [
   },
 ];
 
-const BlogDetailsPage = async ({params}) => {
+const BlogDetailsPage = async({params}) => {
   const {blogId} = await params;
   const blog = blogs.find(blog => blog.id === parseInt(blogId));
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center">Blogs Details will show here</h1>
-      <div className="card card-border bg-base-100 shadow-md w-96 mx-auto">
+      <h1>Blogs Details will appear here.....</h1>
+      <div key={blog.id} className="card card-border bg-base-100 shadow-md">
         <div className="card-body">
           <h2 className="card-title">{blog.title}</h2>
           <p>{blog.content}</p>

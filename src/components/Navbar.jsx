@@ -50,6 +50,14 @@ const Navbar = () => {
             Developers
           </Link>
         </li>
+        <li>
+          <Link
+            className={pathname === "/posts" ? "underline text-red-500" : ""}
+            href="/posts"
+          >
+            Posts
+          </Link>
+        </li>
       </>
     );
     ;
